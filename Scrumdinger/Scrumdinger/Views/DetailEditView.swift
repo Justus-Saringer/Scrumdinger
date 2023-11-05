@@ -25,10 +25,11 @@ struct DetailEditView: View {
                     Spacer()
                     Text("\(scrum.lengthInMinutes) min")
                 }
+                
+                ThemePicker(selection: $scrum.theme)
             }
             
             Section(header: Text("Attendees")) {
-                
                 ForEach(scrum.attendees) { attendee in
                     Text(attendee.name)
                 }.onDelete { indexSet in
@@ -47,7 +48,6 @@ struct DetailEditView: View {
                         Image(systemName: "plus.circle.fill")
                     }.disabled(newAttendeeName.isEmpty)
                 }
-                
             }
             
         }
