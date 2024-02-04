@@ -13,6 +13,8 @@
 		D015E1EA2B1D08CB00019F03 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015E1E92B1D08CB00019F03 /* AVPlayer+Ding.swift */; };
 		D015E1EC2B1D08D900019F03 /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015E1EB2B1D08D900019F03 /* ScrumTimer.swift */; };
 		D015E1EE2B1D346800019F03 /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015E1ED2B1D346800019F03 /* MeetingFooterView.swift */; };
+		D06706AD2B3E2EFB00D607F2 /* NewScrumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06706AC2B3E2EFB00D607F2 /* NewScrumSheet.swift */; };
+		D07A7F672B6FD1A90075648B /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07A7F662B6FD1A90075648B /* History.swift */; };
 		D0C3C41F2AF71A720013C787 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C3C41E2AF71A720013C787 /* ScrumsView.swift */; };
 		D0C3C4212AF7C3D00013C787 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C3C4202AF7C3D00013C787 /* DetailView.swift */; };
 		D0C3C4232AF8054F0013C787 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C3C4222AF8054F0013C787 /* DetailEditView.swift */; };
@@ -55,6 +57,8 @@
 		D015E1E92B1D08CB00019F03 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		D015E1EB2B1D08D900019F03 /* ScrumTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
 		D015E1ED2B1D346800019F03 /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFooterView.swift; sourceTree = "<group>"; };
+		D06706AC2B3E2EFB00D607F2 /* NewScrumSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScrumSheet.swift; sourceTree = "<group>"; };
+		D07A7F662B6FD1A90075648B /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		D0C3C41E2AF71A720013C787 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		D0C3C4202AF7C3D00013C787 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D0C3C4222AF8054F0013C787 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				D0C3C4262AF8251C0013C787 /* ThemePicker.swift */,
 				D015E1E22B1CC4F500019F03 /* MeetingHeaderView.swift */,
 				D015E1ED2B1D346800019F03 /* MeetingFooterView.swift */,
+				D06706AC2B3E2EFB00D607F2 /* NewScrumSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				D015E1EB2B1D08D900019F03 /* ScrumTimer.swift */,
 				D0D233EC2AF6D68B00FA8933 /* Theme.swift */,
 				D0D233EE2AF70C7400FA8933 /* DailyScrum.swift */,
+				D07A7F662B6FD1A90075648B /* History.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07A7F672B6FD1A90075648B /* History.swift in Sources */,
 				D0C3C4272AF8251C0013C787 /* ThemePicker.swift in Sources */,
 				D015E1E52B1D084500019F03 /* ScrumProgressViewStyle.swift in Sources */,
 				D0D233EF2AF70C7400FA8933 /* DailyScrum.swift in Sources */,
@@ -335,6 +342,7 @@
 				D015E1EE2B1D346800019F03 /* MeetingFooterView.swift in Sources */,
 				D0C3C4232AF8054F0013C787 /* DetailEditView.swift in Sources */,
 				D0D233F32AF712D100FA8933 /* TrailingIconLabelStyle.swift in Sources */,
+				D06706AD2B3E2EFB00D607F2 /* NewScrumSheet.swift in Sources */,
 				D0D233ED2AF6D68B00FA8933 /* Theme.swift in Sources */,
 				D0C3C41F2AF71A720013C787 /* ScrumsView.swift in Sources */,
 				D015E1EC2B1D08D900019F03 /* ScrumTimer.swift in Sources */,
