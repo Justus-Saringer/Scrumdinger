@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MeetingTimerView : View {
-    let speaker: [ScrumTimer.Speaker]
+    let speakers: [ScrumTimer.Speaker]
     let theme: Theme
     
     private var currentSpeaker: String {
-        speaker.first(where: {$0.isCompleted == false})?.name ?? "someone"
+        speakers.first(where: {$0.isCompleted == false})?.name ?? "someone"
     }
     
     var body: some View {
@@ -27,11 +27,20 @@ struct MeetingTimerView : View {
                 .accessibilityElement(children: .combine)
                 .foregroundColor(theme.mainColor)
             }
+            .overlay {
+                ForEach(speakers) { speaker in
+                    if speaker.isCompleted, let index = speakers.firstIndex(where:  { $0.id == speaker.id }) {
+                        SpeakerArc(speakerIndex: index, totalSpeakers: speakers.count)
+                            .rotation(Angle(degrees: -90))
+                    }
+                }
+            }
+            .padding(.horizontal)
     }
 }
 
 #Preview {
     MeetingTimerView(
-        speaker: [ScrumTimer.Speaker(name: "Bill", isCompleted: true), ScrumTimer.Speaker(name: "Cathy", isCompleted: false)],
+        speakers: [ScrumTimer.Speaker(name: "Bill", isCompleted: true), ScrumTimer.Speaker(name: "Cathy", isCompleted: false)],
         theme: .bubblegum)
 }
