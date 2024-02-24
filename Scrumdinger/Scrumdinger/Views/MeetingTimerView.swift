@@ -10,6 +10,7 @@ import SwiftUI
 struct MeetingTimerView : View {
     let speakers: [ScrumTimer.Speaker]
     let theme: Theme
+    let isRecording: Bool
     
     private var currentSpeaker: String {
         speakers.first(where: {$0.isCompleted == false})?.name ?? "someone"
@@ -23,15 +24,20 @@ struct MeetingTimerView : View {
                     Text(currentSpeaker)
                         .font(.title)
                     Text("is speaking")
+                    Image(systemName: isRecording ? "mic" : "mic.slash")
+                        .font(.title)
+                        .padding(.top)
+                        .accessibilityLabel(isRecording ? "with transcribing" : "without transcribing")
                 }
                 .accessibilityElement(children: .combine)
-                .foregroundColor(theme.mainColor)
+                .foregroundColor(theme.accentColor)
             }
             .overlay {
                 ForEach(speakers) { speaker in
                     if speaker.isCompleted, let index = speakers.firstIndex(where:  { $0.id == speaker.id }) {
                         SpeakerArc(speakerIndex: index, totalSpeakers: speakers.count)
                             .rotation(Angle(degrees: -90))
+                            .stroke(theme.mainColor, lineWidth: 12)
                     }
                 }
             }
@@ -42,5 +48,5 @@ struct MeetingTimerView : View {
 #Preview {
     MeetingTimerView(
         speakers: [ScrumTimer.Speaker(name: "Bill", isCompleted: true), ScrumTimer.Speaker(name: "Cathy", isCompleted: false)],
-        theme: .bubblegum)
+        theme: .bubblegum, isRecording: true)
 }
